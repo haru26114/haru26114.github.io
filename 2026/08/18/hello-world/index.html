@@ -300,11 +300,15 @@ a { color: var(--theme-color); }
 /* ===== 删除纯色背景：body 透明，只显示壁纸 ===== */
 body { background: transparent !important; }
 
-/* ===== 黑夜模式：去掉 70% 黑蒙层，让壁纸也清晰透出 ===== */
+/* ===== 黑夜模式：整页统一加黑色蒙层（标题区+文章区一致压暗） ===== */
 [data-theme="dark"] #web_bg::before {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+/* 去掉标题区单独的那层蒙层，避免双重压暗 */
+[data-theme="dark"] #page-header:not(.not-top-img)::before {
   background-color: transparent !important;
 }
-/* 黑夜模式：单独换一张壁纸（把图放到 source/img/night.png） */
+/* 黑夜模式：单独换一张壁纸（night.jpg） */
 [data-theme="dark"] #web_bg {
   background-image: url(/img/night.jpg) !important;
 }
