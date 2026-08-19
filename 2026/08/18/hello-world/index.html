@@ -273,6 +273,19 @@ a { color: var(--theme-color); }
 #pagination .page-number.current, .pagination .current { background: var(--theme-color) !important; }
 #rightside .button:hover { background: var(--theme-color) !important; }
 
+/* ===== 顶部横幅缩小：只保留导航栏那一行的底色 ===== */
+#page-header.full_page {
+  height: 60px !important;
+  min-height: 60px !important;
+}
+#page-header.full_page #site-info,
+#page-header.full_page #scroll-down {
+  display: none !important;
+}
+#page-header.full_page #nav {
+  background: transparent !important;
+}
+
 /* ===== 删除纯色背景：body 透明，只显示壁纸 ===== */
 body { background: transparent !important; }
 
