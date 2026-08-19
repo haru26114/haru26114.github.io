@@ -277,6 +277,20 @@ a { color: var(--theme-color); }
 #page-header {
   background-color: transparent !important;
 }
+/* 顶部横幅底部的水波特效 */
+#page-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-image: url(/img/wave.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+}
 
 /* ===== 删除纯色背景：body 透明，只显示壁纸 ===== */
 body { background: transparent !important; }
