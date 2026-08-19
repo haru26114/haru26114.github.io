@@ -277,19 +277,24 @@ a { color: var(--theme-color); }
 #page-header {
   background-color: transparent !important;
 }
-/* 顶部横幅底部的水波特效 */
+/* 顶部横幅底部的水波特效（半透明白 + 流动动画） */
 #page-header::after {
   content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
-  right: 0;
+  width: 200%;
   height: 100px;
   background-image: url(/img/wave.svg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 2;
+  animation: wave-move 8s linear infinite;
+}
+@keyframes wave-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ===== 删除纯色背景：body 透明，只显示壁纸 ===== */
