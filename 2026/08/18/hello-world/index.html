@@ -300,6 +300,15 @@ a { color: var(--theme-color); }
 /* ===== 删除纯色背景：body 透明，只显示壁纸 ===== */
 body { background: transparent !important; }
 
+/* ===== 黑夜模式：去掉 70% 黑蒙层，让壁纸也清晰透出 ===== */
+[data-theme="dark"] #web_bg::before {
+  background-color: transparent !important;
+}
+/* 黑夜模式：单独换一张壁纸（把图放到 source/img/night.png） */
+[data-theme="dark"] #web_bg {
+  background-image: url(/img/night.png) !important;
+}
+
 /* ===== 壁纸模式 ===== */
 body.ts-mode-banner #web_bg { top: 0 !important; bottom: auto !important; height: 58vh !important; }
 body.ts-mode-solid #web_bg { display: none !important; }
