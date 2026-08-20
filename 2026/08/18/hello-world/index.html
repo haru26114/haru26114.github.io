@@ -200,7 +200,7 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/live2d-widgets@0/waifu.css"><style>
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><link rel="stylesheet" href="/live2d/waifu.css"><style>
 /* 看板娘移到右下角（右侧留 12px 空隙） */
 #waifu { left: auto !important; right: 12px !important; }
 /* 交互按钮挪到看板娘左侧，避免贴边点不到 */
@@ -430,10 +430,11 @@ body.ts-grid #recent-posts {
   list-folded="true"
   list-max-height="200px"
 ></meting-js>
-<script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/live2d.min.js"></script><script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/waifu-tips.js"></script><script>
+<script src="/live2d/live2d.min.js"></script><script src="/live2d/waifu-tips.js"></script><script>
 if (screen.width >= 768) {
   initWidget({
-    waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@0/waifu-tips.json",
+    waifuPath: "/live2d/waifu-tips.json",
+    useCDN: true,
     cdnPath: "/live2d/",
     tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
   });
