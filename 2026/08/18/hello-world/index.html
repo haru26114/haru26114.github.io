@@ -328,19 +328,17 @@ body.ts-grid #recent-posts {
   body.ts-grid #recent-posts { grid-template-columns: 1fr; }
 }
 
-/* ===== 音乐播放器：匹配博客卡片风格 ===== */
-#aside-content .aplayer {
+/* ===== 音乐播放器：固定悬浮，精致样式 ===== */
+.aplayer-fixed {
   border: none !important;
-  border-radius: 8px !important;
-  background: var(--card-bg) !important;
-  box-shadow: var(--card-box-shadow) !important;
-  padding: 12px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18) !important;
+  overflow: hidden;
 }
-#aside-content .aplayer .aplayer-info {
+.aplayer-fixed .aplayer-info {
   border-top: none !important;
 }
-#aside-content .aplayer .aplayer-list {
-  border: none !important;
+.aplayer-fixed .aplayer-list {
   box-shadow: none !important;
 }
 </style>
@@ -432,11 +430,11 @@ body.ts-grid #recent-posts {
   } else {
     window.loadOtherComment = loadGiscus
   }
-})()</script></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><meting-js
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js
   server="netease"
   type="playlist"
   id="18273679018"
-  fixed="false"
+  fixed="true"
   autoplay="false"
   theme="#8EA7F0"
   loop="all"
@@ -447,14 +445,7 @@ body.ts-grid #recent-posts {
   list-max-height="200px"
   lrc-type="0"
 ></meting-js>
-<script>
-(function () {
-  var meting = document.querySelector('meting-js');
-  var ann = document.querySelector('.card-announcement');
-  if (meting && ann) ann.after(meting);
-})();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><script src="/live2d/live2d.min.js"></script><script src="/live2d/waifu-tips.js"></script><script>
+<script src="/live2d/live2d.min.js"></script><script src="/live2d/waifu-tips.js"></script><script>
 if (screen.width >= 768) {
   initWidget({
     waifuPath: "/live2d/waifu-tips.json",
