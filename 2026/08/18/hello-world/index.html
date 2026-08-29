@@ -318,14 +318,24 @@ body.ts-mode-banner #web_bg { top: 0 !important; bottom: auto !important; height
 body.ts-mode-solid #web_bg { display: none !important; }
 body.ts-mode-solid { background: #eef1f8 !important; }
 
-/* ===== 文章布局：网格 ===== */
-body.ts-grid #recent-posts {
+/* ===== 文章布局：网格（图上字下的竖版卡片） ===== */
+body.ts-grid .recent-post-items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+body.ts-grid .recent-post-item {
+  flex-direction: column !important;
+  height: auto !important;
+  margin-bottom: 0 !important;
+}
+body.ts-grid .recent-post-item .post_cover {
+  width: 100% !important;
+  height: 180px !important;
+  order: 0 !important;
+}
 @media (max-width: 768px) {
-  body.ts-grid #recent-posts { grid-template-columns: 1fr; }
+  body.ts-grid .recent-post-items { grid-template-columns: 1fr; }
 }
 
 /* ===== 音乐播放器：固定悬浮，精致样式 ===== */
